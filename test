@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			span {
+				position: absolute;
+				top: 30px; 
+   				left: 0; 
+   				width: 100%;
+   				color: blue;
+			}
+			img {
+				position: relative;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<img src="images/defaultPL.png"><span>HELLO</span><img>
+
+		
+	</body>
+
+</html>

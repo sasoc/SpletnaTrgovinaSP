@@ -28,7 +28,9 @@ main {
   width: 70%;
   height: 90%;
   float: left;
-  background-color: green;
+  background-color: white;
+  overflow: auto;
+  position:relative;
 }
 
 aside {
@@ -38,11 +40,46 @@ aside {
   background-color: grey;
 }
 
+.records {
+  width:42vw;
+  height:42vw;
+  margin-left: 20%;
+  margin-top: 10%;
+  background-size: 100% 100%;
+  display: block;
+  box-shadow: 5px 5px 5px #7C7C7C;
+  border-style: solid;
+  border-color: black;
+}
+
+.info {
+  opacity: 0.5;
+  width: 100%;
+  margin-top: 70%;
+  height: 30%;
+  display: block;
+  position: relative;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 2);
+}
+
+.info > p {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.info > p > h2{
+  color:inherit;
+}
+
+.info > p > h3{
+  color:inherit;
+}
+
 .logo { 
     width: 30%;
     height: 100%;
     display: block;
-    
     margin-left: 35%;
 }
 
@@ -115,10 +152,19 @@ aside {
     width: 70%;
     z-index: 1;
   }
+
+  .records {
+    width:70vw;
+    height:70vw;
+    margin-left: 15%;
+    margin-top: 10%;
+  }
+
+
 }
 
 
   
 
-}
+
 
