@@ -27,10 +27,11 @@ header {
 main { 
   width: 70%;
   height: 90%;
-  float: left;
+  display: flex;
   background-color: white;
   overflow: auto;
-  position:relative;
+  position: relative;
+  flex-direction: column;
 }
 
 aside {
@@ -38,6 +39,45 @@ aside {
   height: 90%;
   float: left;
   background-color: grey;
+}
+
+.search {
+  margin-left: 10%;
+  width: 80%;
+  margin-right:auto;
+  margin-top: 5%;
+}
+
+.search > input {
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+form {
+  height: 90%;
+}
+
+input[type="checkbox"] + div {
+  display:absolute;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+input[type="checkbox"]:checked + div {
+  background-color: blue; 
+}
+
+.genre {
+  float:left;
+  width: 30%;
+  height: 30%;
+}
+
+.genre_main {
+  width: 100%;
+  height: 40%;
 }
 
 .records {
@@ -50,30 +90,51 @@ aside {
   box-shadow: 5px 5px 5px #7C7C7C;
   border-style: solid;
   border-color: black;
+  flex-shrink: 0;
 }
 
 .info {
-  opacity: 0.5;
   width: 100%;
   margin-top: 70%;
   height: 30%;
   display: block;
   position: relative;
+}
+
+.bckgrnd {
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
   background: rgb(0, 0, 0); /* fallback color */
   background: rgba(0, 0, 0, 2);
+  z-index: 3;
 }
 
 .info > p {
-  color: #ffffff;
   opacity: 1;
+  color: : #ffffff;
+  position: absolute;
+  text-decoration: none;
+  z-index: 4;
+  
 }
 
 .info > p > h2{
-  color:inherit;
+  opacity: 1;
+  color: : #ffffff;
+  position:absolute;
+  text-decoration: none;
 }
 
+
 .info > p > h3{
-  color:inherit;
+  opacity: 1;
+  color: : #ffffff;
+  position:absolute;
+ text-decoration: none;
+  
 }
 
 .logo { 
@@ -85,11 +146,11 @@ aside {
 
 
 .search-icon {
+  align-self: center;
 	width: 7%;
 	height: 70%;
 	float: left;
 	background-color: grey;
-	align-self: center;
 	display: none;
 	margin-left: 2%;
 	border-radius: 20%;
@@ -110,7 +171,7 @@ aside {
 
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     /* For mobile phones: */
   main { 
     width: 100%;

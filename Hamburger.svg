@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="search-icon">
+	<g>
+		<path fill="none" stroke="#1abc9c" stroke-width="10" stroke-linejoin="bevel" d="m 5,10 55,0"/>
+		<path fill="none" stroke="#1abc9c" stroke-width="10" stroke-linejoin="bevel" d="m 5,30 55,0"/>
+		<path fill="none" stroke="#1abc9c" stroke-width="10" stroke-linejoin="bevel" d="m 5,50 55,0"/>
+	</g>
+</svg>
