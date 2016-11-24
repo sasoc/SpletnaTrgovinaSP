@@ -10,65 +10,147 @@
 
 	<body>
 		<header>
-			<img src="images/search.png" id="aside_button" class="search-icon">
+			<a href="#search" class="search-icon"><img src="images/search.png" id="aside_button" class="search-img"></a>
 			<img src="images/icon.png" class="logo">
-			<img src="images/user.png" class="user-icon">
+			<label class="user-icon"><input name="popup" type="checkbox" style="display:none" required /><img src="images/user.png" class="user-img"><div class="user-popup"><a href="#login" class="user-button">prodaj</a><a href="#login" class="user-button">log in</a></div></label>
+
 		</header>
-		<aside id="aside" context-centered>
-			<form  class="search">
-  				First name: <br><input type="text" name="fname"><br>
-  				Last name: <br><input type="text" name="lname"><br>
-  				<hr style="margin-bottom: 2%">
+		<dialog id="login">
+			<form>
+				<label>Email:<br><input  type="email" name="email" required /></label><br>
+				<label>Password:<br><input type="password" name="password" required /></label>
+			</form>
+		</dialog>
+		<main>
 
-  				<div class="genre_main">
-  					<label class="genre" ><input type="checkbox" name="vehicle" value="Rock" style="display:none" required><div class="genre_select" ><span>Rock</span></div></label>
-  					<label class="genre" style="margin-left: 5%"><input type="checkbox" name="vehicle" value="Pop" style="display:none" required><div class="genre_select" ><span>Pop</span></div></label>
-					<label class="genre" style="margin-left: 5%"><input type="checkbox" name="vehicle" value="Classic" style="display:none" required><div class="genre_select" ><span>Classic</span></div></label><br>
-					<label class="genre" style="margin-top: 5%"><input type="checkbox" name="vehicle" value="Rock" style="display:none" required><div class="genre_select" ><span>Rock</span></div></label>
-  					<label class="genre" style="margin-left: 5%; margin-top: 5%"><input type="checkbox" name="vehicle" value="Pop" style="display:none" required><div class="genre_select" ><span>Pop</span></div></label>
-					<label class="genre" style="margin-left: 5%; margin-top: 5%"><input type="checkbox" name="vehicle" value="Classic" style="display:none" required><div class="genre_select" ><span>Classic</span></div></label><br>
-					<label class="genre" style="margin-top: 5%"><input type="checkbox" name="vehicle" value="Rock" style="display:none" required><div class="genre_select" ><span>Rock</span></div></label>
-  					<label class="genre" style="margin-left: 5%; margin-top: 5%"><input type="checkbox" name="vehicle" value="Pop" style="display:none" required><div class="genre_select" ><span>Pop</span></div></label>
-					<label class="genre" style="margin-left: 5%; margin-top: 5%"><input type="checkbox" name="vehicle" value="Classic" style="display:none" required><div class="genre_select" ><span>Classic</span></div></label>
+			<aside id="search" context-centered>
+				<form  class="search-form">
+	  				First name: <br><input type="text" name="fname"><br>
+	  				Last name: <br><input type="text" name="lname"><br>
+	  				<hr style="margin-bottom: 5%">
 
+	  				<div class="genre_main">
+	  					<label class="genre" >
+	  						<input type="checkbox" name="vehicle" value="Rock" style="display:none" required>
+	  						<div class="genre_select">
+	  							<span>Classic</span>
+	  						</div>
+	  					</label>
 
+	  					<label class="genre">
+	  						<input type="checkbox" name="vehicle" value="Pop" style="display:none" required>
+	  						<div class="genre_select" >
+	  							<span>Electronic</span>
+	  						</div>
+	  					</label>
+
+						<label class="genre">
+							<input type="checkbox" name="vehicle" value="Classic" style="display:none" required>
+							<div class="genre_select" >
+								<span>Hip Hop</span>
+							</div>
+						</label><br>
+						
+
+						<label class="genre">
+							<input type="checkbox" name="vehicle" value="Rock" style="display:none" required>
+							<div class="genre_select" >
+								<span>Jazz</span>
+							</div>
+						</label>
+
+	  					<label class="genre">
+	  						<input type="checkbox" name="vehicle" value="Pop" style="display:none" required>
+	  						<div class="genre_select" >
+	  							<span>Metal</span>
+	  						</div>
+	  					</label>
+
+						<label class="genre">
+							<input type="checkbox" name="vehicle" value="Classic" style="display:none" required>
+							<div class="genre_select" >
+								<span>Pop</span>
+							</div>
+						</label><br>
+						
+						
+						
+
+						<label class="genre">
+							<input type="checkbox" name="vehicle" value="Rock" style="display:none" required>
+							<div class="genre_select" >
+								<span>RnB</span>
+							</div>
+						</label>
+
+	  					<label class="genre">
+	  						<input type="checkbox" name="vehicle" value="Pop" style="display:none" required>
+	  						<div class="genre_select">
+	  							<span>Rock</span>
+	  						</div>
+	  					</label>
+
+						<label class="genre">
+							<input type="checkbox" name="vehicle" value="Classic" style="display:none" required>
+							<div class="genre_select">
+								<span>Other</span>
+							</div>
+						</label>
+
+					</div>
+					
+	  				<hr style="margin-bottom: 5%; margin-top: 5%">
+	  				<div class="media_main">
+						<label class="media_type">
+	  						<input type="checkbox" name="vehicle" value="Pop" style="display:none" required>
+	  						<div class="media_select">
+	  							<span>PL</span>
+	  						</div>
+	  					</label>
+
+						<label class="media_type">
+							<input type="checkbox" name="vehicle" value="Classic" style="display:none" required>
+							<div class="media_select">
+								<span>CD</span>
+							</div>
+						</label>
+	  				</div>
+	  				<hr style="margin-bottom: 5%; margin-top: 5%">
+	  				<a href="Home.html">Nazaj</a><input type="submit" value="Submit">
+				</form>
+				<!--<div class="border"><div>-->
+			</aside>
+			<section>
+				<div class="records" style="background-image: url('images/devils.jpg');">
+					<div class="info">
+						<div class="bckgrnd">
+						</div>
+						<p>
+							<h3>Izvajalec: Devil's gun</h3>
+							<h2>Naslov: Raising The Beast</h2>
+						</p>
+					</div>
 				</div>
 				
-  				<hr style="margin-bottom: 2%; margin-top: 2%">
-
-  				<input type="submit" value="Submit">
-			</form>
-		</aside>
-		<main id="main">
-			<div class="records" style="background-image: url('images/devils.jpg');">
-				<div class="info">
-					<div class="bckgrnd">
+				<div class="records" style="background-image: url('images/pink-floyd-dark-side-of-the-moon-album-cover.jpg');">
+					<div class="info">
+						<div class="bckgrnd">
+						</div>
+						<p>
+							<h3>Izvajalec: Devil's gun</h3>
+							<h2>Naslov: Raising The Beast</h2>
+						</p>
 					</div>
-					<p>
-						<h3>Izvajalec: Devil's gun</h3>
-						<h2>Naslov: Raising The Beast</h2>
-					</p>
 				</div>
-			</div>
-
-			<div class="records" style="background-image: url('images/pink-floyd-dark-side-of-the-moon-album-cover.jpg');">
-				<div class="info">
-					<div class="bckgrnd">
+				<div class="records" style="background-image: url('images/defaultPL.png');">	
+					<div class="info">
+						<p>
+							<h3>Izvajalec: Devil's gun</h3>
+							<h2>Naslov: Raising The Beast</h2>
+						</p>
 					</div>
-					<p>
-						<h3>Izvajalec: Devil's gun</h3>
-						<h2>Naslov: Raising The Beast</h2>
-					</p>
 				</div>
-			</div>
-			<div class="records" style="background-image: url('images/defaultPL.png');">	
-				<div class="info">
-					<p>
-						<h3>Izvajalec: Devil's gun</h3>
-						<h2>Naslov: Raising The Beast</h2>
-					</p>
-				</div>
-			</div>
+			</section>
 		</main>
 	</body>
 
