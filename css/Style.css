@@ -1,169 +1,28 @@
 * {
 	margin: 0;
 	padding: 0;
-  box-sizing: border-box;
+  	box-sizing: border-box;
 }
 
 
 html {
-  height: 100%;
+  	height: 100%;
  	width: 100%;
+ 	background-color: #d3d3d3;
 }
 
 body {
 	height: 100%;
  	width: 100%;
-  min-height: 100%;
+  	min-height: 100%;
 }
-
 
 header {
-  width: 100%;
-  height: 10%;
+  	width: 100%;
+  	height: 10%;
+  	min-height: 50px;
 	background-color: #000;
-  display: flex;
-}
-
-main {
-  width: 100%;
-  height: 90%;
-  display: flex;
-}
-
-section { 
-  width: 70%;
-  height: 100%%;
-  display: flex;
-  background-color: white;
-  overflow: auto;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-}
-
-aside {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right-style: double;
-  overflow: auto;
-}
-
-.search-form {
-  width: 80%;
-  height: 90%;
-  margin-top: 5%;
-  min-height: 200px;
-}
-
-.search-form > input {
-  width: 100%;
-  box-shadow: 3px 3px 3px #000;
-}
-
-input[type="text"] {
-  margin-bottom: 5%;
-}
-
-input[type="checkbox"] + div {
-  border-style: outset;
-  border-color: #332b00;
-  background-color: #ffa07a;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-input[type="checkbox"] + div:hover {
-  background-color:   #696969; 
-}
-
-input[type="checkbox"]:checked + div {
-  background-color:   gray; 
-  border-style: inset;
-  font-weight: bold;
-}
-
-.genre {
-  float:left;
-  width: 33.33%;
-  height: 33.33%;
-}
-
-.genre_main {
-  width: 100%;
-  height: 30%;
-}
-
-.media_main {
-  width: 100%;
-  height: 20%;
-}
-
-.media_type {
-  float:left;
-  width: 50%;
-  height: 100%;
-}
-
-.records {
-  width:42vw;
-  height:42vw;
-  margin-top: 10%;
-  background-size: 100% 100%;
-  
-  box-shadow: 5px 5px 5px #7C7C7C;
-  border-style: solid;
-  border-color: black;
-  flex-shrink: 0;
-}
-
-.info {
-  width: 100%;
-  margin-top: 70%;
-  height: 30%;
-  
-  position: relative;
-}
-
-.bckgrnd {
-  opacity: 0.5;
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  background: rgb(0, 0, 0); /* fallback color */
-  background: rgba(0, 0, 0, 2);
-  z-index: 3;
-}
-
-.info > p {
-  opacity: 1;
-  color: : #ffffff;
-  position: absolute;
-  text-decoration: none;
-  z-index: 4;
-  
-}
-
-.info > p > h2{
-  opacity: 1;
-  color: : #ffffff;
-  position:absolute;
-  text-decoration: none;
-}
-
-
-.info > p > h3{
-  opacity: 1;
-  color: : #ffffff;
-  position:absolute;
- text-decoration: none;
-  
+  	display: flex;
 }
 
 .logo { 
@@ -174,48 +33,56 @@ input[type="checkbox"]:checked + div {
     margin-right: 26%;
 }
 
+.logo-img { 
+    width: 100%;
+    height: 100%;
+}
+
 
 .search-icon {
-  align-self: center;
+  	align-self: center;
 	width: 7%;
 	height: 70%;
 	float: left;
-	background-color: grey;
+	background-color: white;
 	display: none;
 	margin-left: 2%;
 	border-radius: 20%;
-  box-shadow: 3px 3px 3px #7C7C7C;
+	border-style: solid;
+  	border-color: white;
 }
 
 .search-img {
-  width: 100%;
-  height: 100%;
+  	width: 100%;
+  	height: 100%;
+  	
 }
 
 .user-img {
-  width: 100%;
-  height: 100%;
+  	width: 100%;
+  	height: 100%;
+
 }
 
 
 
 input[name="popup"]~ div {
-  display:none;
+  	display:none;
 }
 
 input[name="popup"]:checked ~ div {
-  display:flex;
-  background:grey;
-  position: fixed;
-  height: 150px;
-  width: 200px;
-  z-index: 10000;
-  float: left;
-  margin-left: -131px;
-  align-items: center;
-  flex-flow:column;
-  border-style: solid;
-  border-color: black;
+ 	display:flex;
+  	background: gray;
+  	position: fixed;
+  	height: 150px;
+  	width: 200px;
+	z-index: 2;
+  	float: left;
+  	margin-left: -131px;
+  	align-items: center;
+  	flex-flow:column;
+  	border-style: solid;
+  	border-color: black;
 }
 
 .user-button {
@@ -224,10 +91,10 @@ input[name="popup"]:checked ~ div {
   border-style: solid;
   background: black;
   color: white;
-  display:flex;
+  display: flex;
   align-items: center;
   flex-flow:column;
-  
+  z-index: 3;
   justify-content: center;
   margin-top: 10%
 
@@ -237,148 +104,49 @@ input[name="popup"]:checked ~ div {
   border-color: black;
 }
 
-.user-icon {
-  width: 5%;
-  height: 50%;
-  float: left;
-  background-color: grey;
-  align-self: center;
-  
-  margin-right: 2%;
-  border-radius: 20%;
-  box-shadow: 3px 3px 3px #7C7C7C;
-}
-
-.border {
-  border-style: solid; 
-  margin-left: 5%;
-  height: 90%;
-  border-style: groove;
-}
-
 .user-icon:active {
     display: block;
-    box-shadow: 3px 3px 3px #000;
+    
     transform:translate(1px,1px);
-  }
-
-login {
-  diplay: none;
 }
 
-#login:target ~ main {
-  filter: blur(10px);
-}
-
-#login:target > form {
-  display: block;
-  width: 70%;
-  align-items: center;
-  justify-content: center;
-}
-
-#login > form {
-  display:none;
-}
-
-
-
-
-
-
-#login:target {
-  display: flex;
-  left: 0; 
-  right: 0;
-  position: absolute;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:10%;
-  background: white;
+.user-icon {
+  width: 5%;
+  height: 65%;
+  float: left;
+  background-color: white;
   border-style: solid;
-  border-color: gray;
-  z-index: 10;
-  width: 300px;
-  height: 200px;
-  align-items: center;
-  flex-flow:column;
-
+  border-color: white;
+  align-self: center;
+  margin-right: 2%;
+  border-radius: 20%;
+  margin-top: 3px;
 }
+
+
 
 @media only screen and (max-width: 1024px) {
-    /* For mobile phones: */
-  main {
-    width: 100%;
-    height: 90%;
-    display: flex;
+	
+	.logo {
+		width: 50%;
+    	margin-left: 16%;
+    	margin-right: 16%;
+    }
 
-  }
-
-  .border {
-    z-index: 0;
-  }
-  section { 
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    align-items: center;
-
-  }
-
-  .logo {
-    width: 50%;
-    margin-left: 16%;
-    margin-right: 16%;
-  }
-
-  
-
-  .search-icon {
+  	.search-icon {
 		display: block;
 	}
 
-  .user-icon {
-    width: 7%;
-    height: 70%;
-    display: block;
-    margin-right: 2%;
-  }
+  	.user-icon {
+    	width: 7%;
+    	height: 70%;
+    	display: block;
+    	margin-right: 2%;
+  	}
 
-  .search-icon:active {
-    display: block;
-    box-shadow: 3px 3px 3px #000;
-    transform:translate(1px,1px);
-  }
-
-  aside {
-    /*display: none;*/
-    display: none;
-    width: 70%;
-    z-index: 0;
-
-  }
-
-  #search:target {
-    display:flex;
-    position: absolute;
-    z-index: 7;
-    background: white;
-    align-items: center;
-    height: 90%
-  }
-
-  .records {
-    width:70vw;
-    height:70vw;
-    
-    margin-top: 10%;
-  }
-
-
+  	.search-icon:active {
+    	display: block;
+   		
+    	transform:translate(1px,1px);
+  	}
 }
-
-
-  
-
-
-

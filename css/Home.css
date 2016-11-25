@@ -1,0 +1,304 @@
+
+
+:root{
+    --buttonColor: #184862;
+    --pressedButtonColor: #2A4452;
+}
+
+main {
+  width: 100%;
+  height: 90%;
+  display: flex;
+
+}
+
+section { 
+  width: 70%;
+  height: 95%%;
+  display: flex;
+  overflow: auto;
+  position: relative;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  margin-right: 1.5%;
+  background-color: white;
+  z-index: -1;
+}
+
+aside {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  
+  overflow: auto;
+}
+
+.search-form {
+  width: 90%;
+  height: 95%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  min-height: 200px;
+  
+  padding: 5%;
+  border-style: 1px;
+  border-color: gray;
+}
+
+.search-form > input {
+  width: 100%;
+  box-shadow: 1px 1px 1px #000;
+}
+
+input[type="text"] {
+  margin-bottom: 5%;
+}
+
+input[type="checkbox"] + div {
+  border-style: outset;
+  border-color: #2A4452;
+  background-color: var(--buttonColor);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="checkbox"] + div:hover {
+  background-color:   #373F43; 
+}
+
+input[type="checkbox"]:checked + div {
+  background-color:  var(--pressedButtonColor); 
+  border-style: inset;
+  font-weight: bold;
+}
+
+.genre {
+  float:left;
+  width: 33.33%;
+  height: 33.33%;
+}
+
+.genre_main {
+  width: 100%;
+  height: 30%;
+}
+
+.media_main {
+  width: 100%;
+  height: 20%;
+}
+
+.media_type {
+  float:left;
+  width: 50%;
+  height: 100%;
+}
+
+.records {
+  width:42vw;
+  height:42vw;
+  margin-top: 10%;
+  background-size: 100% 100%;
+  
+  box-shadow: 5px 5px 5px #7C7C7C;
+  border-style: solid;
+  border-color: black;
+  flex-shrink: 0;
+}
+
+.info {
+  width: 100%;
+  margin-top: 70%;
+  height: 30%;
+  
+  position: relative;
+}
+
+.bckgrnd {
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 2);
+  z-index: 3;
+}
+
+.info p {
+  opacity: 1;
+  color: : white !important;
+  position: absolute;
+  text-decoration: none;
+  z-index: 4;
+  
+}
+
+.info p h2{
+  opacity: 1;
+  color: : white !important;
+  position:absolute;
+  text-decoration: none;
+}
+
+
+.info p h3{
+  opacity: 1;
+  color: : white !important;
+  position:absolute;
+ text-decoration: none;
+  
+}
+
+.border {
+  border-style: solid; 
+  margin-left: 5%;
+  height: 90%;
+  border-style: groove;
+}
+
+
+
+login {
+  diplay: none;
+}
+
+#login:target ~ main {
+  filter: blur(10px);
+}
+
+#login:target > form {
+  display: block;
+  width: 90%;
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+#login > form {
+  display:none;
+}
+
+#login input {
+  margin-bottom: 5%;
+  width: 100%;
+  padding: 9px 20px;
+  border-radius: 4px;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+#login > a, aside > a {
+  display:none;
+  border-style: 1px solid black;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+
+
+#login:target > a {
+  display:block;
+  margin-left: 90%;
+  border-style: 1px;
+  margin-top: 6px;
+}
+
+#login:target {
+  display: flex;
+  left: 0; 
+  right: 0;
+  position: absolute;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:10%;
+  background: white;
+  border-style: solid;
+  border-color: gray;
+  z-index: 10;
+  width: 300px;
+  height: 200px;
+  align-items: center;
+  flex-flow:column;
+
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    /* For mobile phones: */
+  main {
+    width: 100%;
+    height: 90%;
+    display: flex;
+
+  }
+
+  .border {
+    z-index: 0;
+  }
+  section { 
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    align-items: center;
+    margin: 0%;
+  }
+
+  
+
+  aside {
+    /*display: none;*/
+    display: none;
+    width: 70%;
+    z-index: 0;
+
+  }
+
+  #search:target > a {
+    display:block;
+    margin-left: 80%;
+    border-style: 1px;
+    margin-top: 5%;
+  }
+
+  #search:target {
+    display:flex;
+    position: absolute;
+    z-index: 1;
+    background: white;
+    align-items: center;
+    height: 90%
+  }
+
+  .records {
+    width:70vw;
+    height:70vw;
+    
+    margin-top: 10%;
+  }
+
+
+}
+
+@media only screen and (max-width: 414px) {
+  input[type="checkbox"] + div {
+    font-size: 0.7em;
+  }
+}
+
+
+  
+
+
+

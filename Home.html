@@ -5,17 +5,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" media="screen">
 		<title>Home</title>
 		<link rel="stylesheet" href="css/Style.css">
+		<link rel="stylesheet" href="css/Home.css">
 		<script type="text/javascript" src=""></script>
 	</head>
 
 	<body>
 		<header>
 			<a href="#search" class="search-icon"><img src="images/search.png" id="aside_button" class="search-img"></a>
-			<img src="images/icon.png" class="logo">
-			<label class="user-icon"><input name="popup" type="checkbox" style="display:none" required /><img src="images/user.png" class="user-img"><div class="user-popup"><a href="#login" class="user-button">prodaj</a><a href="#login" class="user-button">log in</a></div></label>
+			<a href="Home.html" class="logo"><img src="images/icon.png" class="logo-img"></a>
+			<label class="user-icon"><input name="popup" type="checkbox" style="display:none" required /><img src="images/user.png" class="user-img"><div class="user-popup"><a href="Sell.html" class="user-button">prodaj</a><a href="#login" class="user-button">log in</a></div></label>
 
 		</header>
 		<dialog id="login">
+			<a href="Home.html">x</a>
 			<form>
 				<label>Email:<br><input  type="email" name="email" required /></label><br>
 				<label>Password:<br><input type="password" name="password" required /></label>
@@ -24,6 +26,7 @@
 		<main>
 
 			<aside id="search" context-centered>
+				<a href="Home.html">x</a>
 				<form  class="search-form">
 	  				First name: <br><input type="text" name="fname"><br>
 	  				Last name: <br><input type="text" name="lname"><br>
@@ -31,21 +34,21 @@
 
 	  				<div class="genre_main">
 	  					<label class="genre" >
-	  						<input type="checkbox" name="vehicle" value="Rock" style="display:none" required>
+	  						<input type="checkbox" name="genre" value="Rock" style="display:none" required>
 	  						<div class="genre_select">
 	  							<span>Classic</span>
 	  						</div>
 	  					</label>
 
 	  					<label class="genre">
-	  						<input type="checkbox" name="vehicle" value="Pop" style="display:none" required>
+	  						<input type="checkbox" name="genre" value="Electronic" style="display:none" required>
 	  						<div class="genre_select" >
 	  							<span>Electronic</span>
 	  						</div>
 	  					</label>
 
 						<label class="genre">
-							<input type="checkbox" name="vehicle" value="Classic" style="display:none" required>
+							<input type="checkbox" name="genre" value="Hip Hop" style="display:none" required>
 							<div class="genre_select" >
 								<span>Hip Hop</span>
 							</div>
@@ -53,21 +56,21 @@
 						
 
 						<label class="genre">
-							<input type="checkbox" name="vehicle" value="Rock" style="display:none" required>
+							<input type="checkbox" name="genre" value="Jazz" style="display:none" required>
 							<div class="genre_select" >
 								<span>Jazz</span>
 							</div>
 						</label>
 
 	  					<label class="genre">
-	  						<input type="checkbox" name="vehicle" value="Pop" style="display:none" required>
+	  						<input type="checkbox" name="genre" value="Metal" style="display:none" required>
 	  						<div class="genre_select" >
 	  							<span>Metal</span>
 	  						</div>
 	  					</label>
 
 						<label class="genre">
-							<input type="checkbox" name="vehicle" value="Classic" style="display:none" required>
+							<input type="checkbox" name="genre" value="Pop" style="display:none" required>
 							<div class="genre_select" >
 								<span>Pop</span>
 							</div>
@@ -77,14 +80,14 @@
 						
 
 						<label class="genre">
-							<input type="checkbox" name="vehicle" value="Rock" style="display:none" required>
+							<input type="checkbox" name="genre" value="RnB" style="display:none" required>
 							<div class="genre_select" >
 								<span>RnB</span>
 							</div>
 						</label>
 
 	  					<label class="genre">
-	  						<input type="checkbox" name="vehicle" value="Pop" style="display:none" required>
+	  						<input type="checkbox" name="genre" value="Rock" style="display:none" required>
 	  						<div class="genre_select">
 	  							<span>Rock</span>
 	  						</div>
@@ -116,7 +119,7 @@
 						</label>
 	  				</div>
 	  				<hr style="margin-bottom: 5%; margin-top: 5%">
-	  				<a href="Home.html">Nazaj</a><input type="submit" value="Submit">
+	  				<input type="submit" value="Submit">
 				</form>
 				<!--<div class="border"><div>-->
 			</aside>
