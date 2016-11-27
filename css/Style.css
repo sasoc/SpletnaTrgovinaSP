@@ -66,11 +66,11 @@ header {
 
 
 
-input[name="popup"]~ div {
+input[name="popup"]~ span {
   	display:none;
 }
 
-input[name="popup"]:checked ~ div {
+input[name="popup"]:checked ~ span {
  	display:flex;
   	background: gray;
   	position: fixed;
@@ -146,7 +146,16 @@ input[name="popup"]:checked ~ div {
 
   	.search-icon:active {
     	display: block;
-   		
     	transform:translate(1px,1px);
+  	}
+
+  	input[name="popup"]:checked ~ span {
+  		margin-left: -141px;
+  	}
+}
+
+@media only screen and (max-width: 414px) {
+  	input[name="popup"]:checked ~ div {
+  		margin-left: -171px;
   	}
 }

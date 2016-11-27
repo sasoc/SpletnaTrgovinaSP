@@ -2,78 +2,92 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" media="screen">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Home</title>
-		<link rel="stylesheet" href="css/Style.css">
-		<link rel="stylesheet" href="css/Home.css">
-		<script type="text/javascript" src=""></script>
+		<link rel="stylesheet" type="text/css" href="css/Style.css">
+		<link rel="stylesheet" type="text/css" href="css/Home.css">
+		<script type="text/javascript" src="javascript/myjs.js"></script>
 	</head>
 
 	<body>
 		<header>
-			<a href="#search" class="search-icon"><img src="images/search.png" id="aside_button" class="search-img"></a>
-			<a href="Home.html" class="logo"><img src="images/icon.png" class="logo-img"></a>
-			<label class="user-icon"><input name="popup" type="checkbox" style="display:none" required /><img src="images/user.png" class="user-img"><div class="user-popup"><a href="Sell.html" class="user-button">prodaj</a><a href="#login" class="user-button">log in</a></div></label>
+			<a href="#search" class="search-icon"><img src="images/search.png" id="aside_button" class="search-img" alt="Search"></a>
+			<a href="Home.html" class="logo"><img src="images/icon.png" class="logo-img" alt="Logo"></a>
+			<label class="user-icon"><input name="popup" type="checkbox" style="display:none" required /><img src="images/user.png" class="user-img" alt="User settings"><span class="user-popup"><a href="Sell.html" class="user-button">prodaj</a><a href="#login" class="user-button">log in</a></span></label>
 
 		</header>
-		<dialog id="login">
+		<div id="login">
 			<a href="Home.html">x</a>
 			<form>
+				
 				<label>Email:<br><input  type="email" name="email" required /></label><br>
 				<label>Password:<br><input type="password" name="password" required /></label>
+				
+				<input type="submit" value="Log in">
+				<a href="#register">Register</a>
 			</form>
-		</dialog>
+		</div>
+		<div id="register">
+			<a href="Home.html">x</a>
+			<form>
+				<h3>Register</h3>
+				<label>Email:<br><input  type="email" name="email" required /></label><br>
+				<label>Password:<br><input type="password" name="password" required /></label>
+				<label>Retype password:<br><input type="password" name="password" required /></label>
+				<input type="submit" value="Register">
+			</form>
+		</div>
 		<main>
 
-			<aside id="search" context-centered>
+			<aside id="search">
 				<a href="Home.html">x</a>
 				<form  class="search-form">
-	  				First name: <br><input type="text" name="fname"><br>
-	  				Last name: <br><input type="text" name="lname"><br>
+	  				Album: <br><input type="text" id="album"><br>
+	  				Artist: <br><input type="text" id="artist"><br>
 	  				<hr style="margin-bottom: 5%">
 
 	  				<div class="genre_main">
 	  					<label class="genre" >
-	  						<input type="checkbox" name="genre" value="Rock" style="display:none" required>
-	  						<div class="genre_select">
+	  						<input type="checkbox" name="genre" value="Classic" style="display:none" required>
+	  						<span class="genre_select">
 	  							<span>Classic</span>
-	  						</div>
+	  						</span>
 	  					</label>
 
 	  					<label class="genre">
 	  						<input type="checkbox" name="genre" value="Electronic" style="display:none" required>
-	  						<div class="genre_select" >
+	  						<span class="genre_select" >
 	  							<span>Electronic</span>
-	  						</div>
+	  						</span>
 	  					</label>
 
 						<label class="genre">
 							<input type="checkbox" name="genre" value="Hip Hop" style="display:none" required>
-							<div class="genre_select" >
+							<span class="genre_select" >
 								<span>Hip Hop</span>
-							</div>
+							</span>
 						</label><br>
 						
 
 						<label class="genre">
 							<input type="checkbox" name="genre" value="Jazz" style="display:none" required>
-							<div class="genre_select" >
+							<span class="genre_select" >
 								<span>Jazz</span>
-							</div>
+							</span>
 						</label>
 
 	  					<label class="genre">
 	  						<input type="checkbox" name="genre" value="Metal" style="display:none" required>
-	  						<div class="genre_select" >
+	  						<span class="genre_select" >
 	  							<span>Metal</span>
-	  						</div>
+	  						</span>
 	  					</label>
 
 						<label class="genre">
 							<input type="checkbox" name="genre" value="Pop" style="display:none" required>
-							<div class="genre_select" >
+							<span class="genre_select" >
 								<span>Pop</span>
-							</div>
+							</span>
 						</label><br>
 						
 						
@@ -81,23 +95,23 @@
 
 						<label class="genre">
 							<input type="checkbox" name="genre" value="RnB" style="display:none" required>
-							<div class="genre_select" >
+							<span class="genre_select" >
 								<span>RnB</span>
-							</div>
+							</span>
 						</label>
 
 	  					<label class="genre">
 	  						<input type="checkbox" name="genre" value="Rock" style="display:none" required>
-	  						<div class="genre_select">
+	  						<span class="genre_select">
 	  							<span>Rock</span>
-	  						</div>
+	  						</span>
 	  					</label>
 
 						<label class="genre">
-							<input type="checkbox" name="vehicle" value="Classic" style="display:none" required>
-							<div class="genre_select">
+							<input type="checkbox" name="genre" value="Other" style="display:none" required>
+							<span class="genre_select">
 								<span>Other</span>
-							</div>
+							</span>
 						</label>
 
 					</div>
@@ -105,52 +119,58 @@
 	  				<hr style="margin-bottom: 5%; margin-top: 5%">
 	  				<div class="media_main">
 						<label class="media_type">
-	  						<input type="checkbox" name="vehicle" value="Pop" style="display:none" required>
-	  						<div class="media_select">
+	  						<input type="checkbox" name="media" value="Pop" style="display:none" required>
+	  						<span class="media_select">
 	  							<span>PL</span>
-	  						</div>
+	  						</span>
 	  					</label>
 
 						<label class="media_type">
-							<input type="checkbox" name="vehicle" value="Classic" style="display:none" required>
-							<div class="media_select">
+							<input type="checkbox" name="media" value="Classic" style="display:none" required>
+							<span class="media_select">
 								<span>CD</span>
-							</div>
+							</span>
 						</label>
 	  				</div>
 	  				<hr style="margin-bottom: 5%; margin-top: 5%">
-	  				<input type="submit" value="Submit">
+	  				<input type="submit" value="Submit" id="search-submit">
 				</form>
 				<!--<div class="border"><div>-->
 			</aside>
-			<section>
-				<div class="records" style="background-image: url('images/devils.jpg');">
+			<section id="records">
+				<div class="record" style="background-image: url('images/devils.jpg');">
 					<div class="info">
 						<div class="bckgrnd">
 						</div>
-						<p>
-							<h3>Izvajalec: Devil's gun</h3>
-							<h2>Naslov: Raising The Beast</h2>
-						</p>
+						<div class="info-text">
+							<h3 style="float:right;">Cena: 10$</h3>
+							<h3>Izvajalec: Devil's gun</h3><br>
+							<h2>Naslov: Raising The Beast</h2><br>
+						</div>
 					</div>
 				</div>
 				
-				<div class="records" style="background-image: url('images/pink-floyd-dark-side-of-the-moon-album-cover.jpg');">
+				<div class="record" style="background-image: url('images/pink-floyd-dark-side-of-the-moon-album-cover.jpg');">
 					<div class="info">
 						<div class="bckgrnd">
 						</div>
-						<p>
-							<h3>Izvajalec: Devil's gun</h3>
-							<h2>Naslov: Raising The Beast</h2>
-						</p>
+						<div class="info-text">
+							<h3 style="float:right;">Cena: 20$</h3>
+							<h3>Izvajalec: Pink Floyd</h3><br>
+							<h2>Naslov: Dark side of the moon</h2><br>
+						</div>
 					</div>
 				</div>
-				<div class="records" style="background-image: url('images/defaultPL.png');">	
+				<div class="record" style="background-image: url('images/defaultPL.png');">	
 					<div class="info">
-						<p>
-							<h3>Izvajalec: Devil's gun</h3>
-							<h2>Naslov: Raising The Beast</h2>
-						</p>
+						<div class="bckgrnd">
+						</div>
+						<div class="info-text">
+							<h3 style="float:right;">Cena: 10$</h3>
+							<h3>Izvajalec: Beatles</h3><br>
+							<h2>Naslov: Let it be</h2><br>
+							
+						</div>
 					</div>
 				</div>
 			</section>

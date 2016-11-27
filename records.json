@@ -1,0 +1,26 @@
+{ "records" : [ 
+	{
+		"album":"Raising the beast" , 
+		"artist":"Devil's gun" , 
+		"genre":["Electronic"],
+		"mediaType":"pl",
+		"price":"10$",
+		"jpgUrl":"devils.jpg"
+	}, 
+	{ 
+		"album":"Dark side of the moon" , 
+		"artist":"Pink Floyd" , 
+		"genre":["Rock"],
+		"mediaType":"pl",
+		"price":"20$",
+		"jpgUrl":"pink-floyd-dark-side-of-the-moon-album-cover.jpg"
+	}, 
+	{ 
+		"album":"Let it be" , 
+		"artist":"Beatles", 
+		"genre":["Rock", "Pop"],
+		"mediaType":"cd",
+		"price":"30$",
+		"jpgUrl":""
+	} 
+]}
