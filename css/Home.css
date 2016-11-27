@@ -345,7 +345,7 @@ input[type="checkbox"]:checked + span {
     height: 90%
   }
 
-  .records {
+  .record {
     width:70vw;
     height:70vw;
     margin-top: 10%;
@@ -365,7 +365,7 @@ input[type="checkbox"]:checked + span {
     color:  white !important;
     z-index: 2;
     position: absolute;
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
 }
 
