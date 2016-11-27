@@ -1,13 +1,9 @@
 
-
-
-
-
 main {
   width: 100%;
   height: 90%;
   display: flex;
-
+  z-index: -2;
 }
 
 section { 
@@ -32,7 +28,7 @@ aside {
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  
+  z-index: 0;
   overflow: auto;
 }
 
@@ -125,7 +121,7 @@ input[type="checkbox"]:checked + span {
   display: block;
   position: absolute;
   background: rgb(0, 0, 0); /* fallback color */
-  background: rgba(0, 0, 0, 2);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 0;
 }
 
@@ -367,6 +363,8 @@ input[type="checkbox"]:checked + span {
     position: absolute;
     font-size: 0.6em;
   }
+ 
+
 }
 
 

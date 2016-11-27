@@ -73,10 +73,10 @@ input[name="popup"]~ span {
 input[name="popup"]:checked ~ span {
  	display:flex;
   	background: gray;
-  	position: fixed;
+  	position: absolute;
   	height: 150px;
   	width: 200px;
-	z-index: 2;
+	z-index: 10;
   	float: left;
   	margin-left: -131px;
   	align-items: center;
