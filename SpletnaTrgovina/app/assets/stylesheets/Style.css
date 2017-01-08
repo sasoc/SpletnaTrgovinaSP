@@ -1,0 +1,187 @@
+* {
+	margin: 0;
+	padding: 0;
+  	box-sizing: border-box;
+}
+
+
+html {
+  	height: 100%;
+ 	width: 100%;
+ 	background-color: #d3d3d3;
+}
+
+body {
+	height: 100%;
+ 	width: 100%;
+  	min-height: 100%;
+}
+
+header {
+  	width: 100%;
+  	height: 8%;
+  	min-height: 50px;
+	background-color: #000;
+  	display: flex;
+}
+
+.logo { 
+    width: 30%;
+    height: 100%;
+    display: block;
+    margin-left: 35%;
+    margin-right: 26%;
+}
+
+.logo-img { 
+    width: 100%;
+    height: 100%;
+}
+
+
+.search-icon {
+  	align-self: center;
+	width: 7%;
+	height: 70%;
+	float: left;
+	background-color: white;
+	display: none;
+	margin-left: 2%;
+	border-radius: 20%;
+	border-style: solid;
+  	border-color: white;
+}
+
+.search-img {
+  	width: 100%;
+  	height: 100%;
+  	
+}
+
+.user-img {
+  	width: 100%;
+  	height: 100%;
+
+}
+
+
+
+input[name="popup"]~ span {
+  	display:none;
+}
+
+input[name="popup"]:checked ~ span {
+ 	display:flex;
+  	background: gray;
+  	position: absolute;
+  	height: 150px;
+  	width: 200px;
+	z-index: 10;
+  	float: left;
+  	margin-left: -131px;
+  	align-items: center;
+  	flex-flow:column;
+  	border-style: solid;
+  	border-color: black;
+}
+
+.user-button {
+  width: 50%;
+  height: 30%;
+  border-style: solid;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-flow:column;
+  z-index: 3;
+  justify-content: center;
+  margin-top: 10%
+
+}
+
+.user-button:active {
+  border-color: black;
+}
+
+.user-icon:active {
+    display: block;
+    
+    transform:translate(1px,1px);
+}
+
+.user-icon {
+  width: 5%;
+  height: 65%;
+  float: left;
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  align-self: center;
+  margin-right: 2%;
+  border-radius: 20%;
+  margin-top: 3px;
+}
+
+.user-login {
+    width: 5%;
+    height: 35%;
+    float: left;
+    flex-flow:column;
+    background-color: black;
+    align-self: center;
+    justify-content: center;
+    margin-right: 2%;
+    border-radius: 20%;
+    text-align:center;
+}
+
+.text-login {
+
+    text-align: center;
+    margin-top: 4px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.sign_out_button {
+    background-color: black;
+    border-style: none;
+    color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+	
+	.logo {
+		width: 50%;
+    	margin-left: 16%;
+    	margin-right: 16%;
+    }
+
+  	.search-icon {
+		display: block;
+	}
+
+  	.user-icon {
+    	width: 7%;
+    	height: 70%;
+    	display: block;
+    	margin-right: 2%;
+  	}
+
+  	.search-icon:active {
+    	display: block;
+    	transform:translate(1px,1px);
+  	}
+
+  	input[name="popup"]:checked ~ span {
+  		margin-left: -141px;
+  	}
+}
+
+@media only screen and (max-width: 414px) {
+  	input[name="popup"]:checked ~ div {
+  		margin-left: -171px;
+  	}
+}

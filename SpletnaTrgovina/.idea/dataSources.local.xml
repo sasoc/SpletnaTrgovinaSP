@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails SpletnaTrgovina: production" uuid="892b0b42-1735-4e17-b96a-ac9399378a75">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
+    <data-source name="Rails SpletnaTrgovina: test" uuid="f31836d3-0ee8-4fe6-b1e1-6d78f6a1fb1b">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>saso</user-name>
+      <user-password>dfd9dfcbdfd9dfc5</user-password>
+    </data-source>
+    <data-source name="Rails SpletnaTrgovina: development" uuid="d08261f9-6afc-4d85-ab4f-77c4450e3e0f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>saso</user-name>
+      <user-password>dfd9dfcbdfd9dfc5</user-password>
+    </data-source>
+  </component>
+</project>
