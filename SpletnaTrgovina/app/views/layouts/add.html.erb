@@ -12,19 +12,34 @@
   <%= stylesheet_link_tag "Style.css" %>
   <%= stylesheet_link_tag "Sell.css" %>
   <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "rails" %>
   <script type="text/javascript" src="javascript/myjs.js"></script>
 </head>
 
 <body>
 <header>
   <a href="#search" class="search-icon"><%= image_tag("search.png", :alt => "Search", :id => "aside_button", :class => "search-img") %></a>
-  <a href="Home.html" class="logo"><%= image_tag("icon.png", :alt => "Logo", :class => "logo-img") %></a>
+  <a href="/" class="logo"><%= image_tag("icon.png", :alt => "Logo", :class => "logo-img") %></a>
   <% if user_signed_in? %>
-      <label class="user-icon"><input name="popup" type="checkbox" style="display:none" required /><%= image_tag("user.png", :alt => "User settings", :class => "user-img") %><span class="user-popup"><a href="Sell.html" class="user-button">prodaj</a><span class="user-button"><%= button_to "Sign out", destroy_user_session_path, :method => :delete, :class => "sign_out_button" %></span></span></label>
+      <div class="user-login"><%= link_to "Profile", records_path, class: "text-login" %></div>
+      <div class="user-login"><%= link_to "Log out", destroy_user_session_path, method: "delete", class: "text-login" %></div>
   <% end %>
-
-
 </header>
-<%= yield %>
+<main>
+  <aside class="aside">
+    <div class="aside-container">
+      <% if is_admin? %>
+          <div class="aside-button"><%= link_to "All records", records_all_path,  :class => "aside-link" %></div>
+      <% end %>
+      <div class="aside-button"><%= link_to "My records", records_path,  :class => "aside-link" %></div>
+      <div class="aside-button"><%= link_to "Add PL", new_record_path(:q => "PL"),  :class => "aside-link" %></div>
+      <div class="aside-button"><%= link_to "Add CD", new_record_path(:q => "CD"),  :class => "aside-link" %></div>
+      <div class="aside-button"><%= link_to "Card", card_path,  :class => "aside-link" %></div>
+    </div>
+  </aside>
+  <%= yield %>
+</main>
+
 </body>
 </html>

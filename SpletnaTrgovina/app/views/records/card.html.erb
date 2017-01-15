@@ -1,0 +1,11 @@
+
+		
+		<div class="main-body">
+      <section>
+        <% @records.each do |i| %>
+          <div class="record-container"><div class="album-artist"><%= i.album %> - <%= i.artist %></div><%= link_to "Remove from card", carditem_path(i), :method => :delete, data: { confirm: "You sure?" }, class: "remove-carditem" %></div>
+        <% end %>
+      </section>
+    </div>
+
+

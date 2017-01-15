@@ -58,4 +58,10 @@ gem 'devise', '~> 4.2'
 
 gem 'paperclip'
 
+gem 'cancancan'
+
+gem 'selenium-webdriver', '~> 2.52'
+
+gem 'watir-webdriver', '~> 0.9.1'
+
 

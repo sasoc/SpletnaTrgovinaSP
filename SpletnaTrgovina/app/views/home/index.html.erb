@@ -1,122 +1,147 @@
 
 
 <div id="login">
-  <a href="Home.html">x</a>
-  <%= form_for(:user, :url => session_path(:user)) do |f| %>
-      <%= f.text_field :email %>
+  <%= link_to "x", root_path %>
+  <%= form_for(:user, :url => session_path(:user), :html => { :id => "login-form"}) do |f| %>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+      <%= f.label :password %>
       <%= f.password_field :password %>
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
+
+      <div class="alerts">
+        <% flash.each do |key, value| %>
+            <% if login_notice(value) %>
+              <div class="alert"><%= value %></div>
+            <% end %>
+        <% end %>
+      </div>
       <%= f.submit 'Sign in' %>
-      <a href="#register">Register</a>
+
   <% end %>
 
 </div>
 <div id="register">
-  <a href="Home.html">x</a>
+  <%= link_to "x", root_path %>
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
     <h3>Register</h3>
-      <%= f.label :email %><br />
+      <%= f.label :email %>
       <%= f.email_field :email %>
 
-      <%= f.label :password %><br />
+      <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation %><br />
+      <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation %>
+      <%= notice %>
+      <div class="alerts">
+        <% flash.each do |key, value| %>
+            <% if register_notice(value) %>
+            <div class="alert"><%= value %></div>
+            <% end %>
+        <% end %>
+      </div>
     <%= f.submit "Sign up" %>
   <% end %>
 </div>
+
+<% if user_signed_in? %>
+  <div class = "card"><%= link_to " ", card_path,  :class => "card-link" %></div>
+<% end %>
 <main>
 
   <aside id="search">
     <a href="Home.html">x</a>
-    <form  class="search-form">
-      Album: <br><input type="text" id="album"><br>
-      Artist: <br><input type="text" id="artist"><br>
+    <%= form_tag "/search", method: "get", :class => "search-form"  do |f| %>
+      Album: <br>
+      <%= text_field_tag :album %>
+      Artist: <br>
+      <%= text_field_tag :artist %>
       <hr style="margin-bottom: 5%">
+
 
       <div class="genre_main">
         <label class="genre" >
-          <input type="checkbox" name="genre" value="Classic" style="display:none" required>
+
+          <%= check_box_tag "genre[]", 1, false, :id => "genre_classic" -%>
           <span class="genre_select">
 	  							<span>Classic</span>
 	  						</span>
         </label>
 
         <label class="genre">
-          <input type="checkbox" name="genre" value="Electronic" style="display:none" required>
+          <%= check_box_tag "genre[]", 2, false, :id => "genre_electronic" -%>
           <span class="genre_select" >
 	  							<span>Electronic</span>
 	  						</span>
         </label>
 
+
         <label class="genre">
-          <input type="checkbox" name="genre" value="Hip Hop" style="display:none" required>
+          <%= check_box_tag "genre[]", 3, false, :id => "genre_hiphop" -%>
           <span class="genre_select" >
-								<span>Hip Hop</span>
-							</span>
+                <span>Hip Hop</span>
+                </span>
+        </label>
+
+        <br>
+
+
+        <label class="genre">
+          <%= check_box_tag "genre[]", 4, false, :id => "genre_jazz" -%>
+          <span class="genre_select" >
+                  <span>Jazz</span>
+                </span>
+        </label>
+
+        <label class="genre">
+          <%= check_box_tag "genre[]", 5, false, :id => "genre_metal" -%>
+          <span class="genre_select" >
+                  <span>Metal</span>
+                </span>
+        </label>
+
+        <label class="genre">
+          <%= check_box_tag "genre[]", 6, false, :id => "genre_pop" -%>
+          <span class="genre_select" >
+                  <span>Pop</span>
+                </span>
         </label><br>
 
-
         <label class="genre">
-          <input type="checkbox" name="genre" value="Jazz" style="display:none" required>
+          <%= check_box_tag "genre[]", 7, false, :id => "genre_rnb" -%>
           <span class="genre_select" >
-								<span>Jazz</span>
-							</span>
+                  <span>RnB</span>
+                </span>
         </label>
 
         <label class="genre">
-          <input type="checkbox" name="genre" value="Metal" style="display:none" required>
-          <span class="genre_select" >
-	  							<span>Metal</span>
-	  						</span>
-        </label>
-
-        <label class="genre">
-          <input type="checkbox" name="genre" value="Pop" style="display:none" required>
-          <span class="genre_select" >
-								<span>Pop</span>
-							</span>
-        </label><br>
-
-
-
-
-        <label class="genre">
-          <input type="checkbox" name="genre" value="RnB" style="display:none" required>
-          <span class="genre_select" >
-								<span>RnB</span>
-							</span>
-        </label>
-
-        <label class="genre">
-          <input type="checkbox" name="genre" value="Rock" style="display:none" required>
+          <%= check_box_tag "genre[]", 8, false, :id => "genre_rock" -%>
           <span class="genre_select">
-	  							<span>Rock</span>
-	  						</span>
+                  <span>Rock</span>
+                </span>
         </label>
 
         <label class="genre">
-          <input type="checkbox" name="genre" value="Other" style="display:none" required>
+          <%= check_box_tag "genre[]", 9, false, :id => "genre_other" -%>
           <span class="genre_select">
-								<span>Other</span>
-							</span>
+                  <span>Other</span>
+                </span>
         </label>
-
       </div>
 
       <hr style="margin-bottom: 5%; margin-top: 5%">
       <div class="media_main">
         <label class="media_type">
-          <input type="checkbox" name="media" value="Pop" style="display:none" required>
+          <%= check_box_tag "media[]", "PL", false, :id => "media_pl" -%>
           <span class="media_select">
 	  							<span>PL</span>
 	  						</span>
         </label>
 
         <label class="media_type">
-          <input type="checkbox" name="media" value="Classic" style="display:none" required>
+          <%= check_box_tag "media[]", "CD", false, :id => "media_cd" -%>
           <span class="media_select">
 								<span>CD</span>
 							</span>
@@ -124,19 +149,25 @@
       </div>
       <hr style="margin-bottom: 5%; margin-top: 5%">
       <input type="submit" value="Submit" id="search-submit">
-    </form>
+    <% end %>
     <!--<div class="border"><div>-->
   </aside>
   <section id="records">
-    <% @records.each do |i| %>
+    <% @records.reverse.each do |i| %>
       <div class="record" style="background-image: url(<%= i.image.url %>);">
         <div class="info">
           <div class="bckgrnd">
           </div>
           <div class="info-text">
-            <h3 style="float:right;"> Cena: <%= i.price %>$</h3>
-            <h3>Izvajalec: <%= i.artist %></h3><br>
-            <h2>Naslov: <%= i.album %></h2><br>
+            <h3 style="float:right;"> Price: <%= i.price %>$</h3>
+            <h3>Artist: <%= i.artist %></h3><br>
+            <h2>Album: <%= i.album %></h2><br>
+            <p>Description: <%= i.description %><p>
+            <%= form_tag({:controller => 'home', :action => 'add_to_card'},:class => "card_button", :method => 'post', :remote => true ) do  %>
+                <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                <%= hidden_field_tag :id, i.id %>
+              <%= submit_tag "Add to card" %>
+            <% end %>
           </div>
         </div>
       </div>

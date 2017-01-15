@@ -1,12 +1,12 @@
 
 		
-		<main>
+		<div class="main-body">
 
 
-      <%= form_for @records, :html => { :multipart => true } , url: {action: "create"} do |f| %>
+      <%= form_for @records, :html => { :class => "record-form", :multipart => true  } , url: {action: "create"} do |f| %>
 				<div>
 					<div>
-            <%= image_tag('defaultPL.png') %>
+            <%= image_tag(@media) %>
 
             <%= f.file_field :image %>
 						Price: <br>
@@ -99,10 +99,16 @@
 	  				
             <label id="about">Description:</label>
             <%= f.text_area :description, size: "40x17" %>
+            <%= hidden_field_tag :media, @Qparam %>
+
             <%= f.submit "Add" %>
+            <div><% flash.each do |key, value| %>
+              <div class="alert"><%= value %></div>
+            <% end %></div>
           </div>
 				</div>
       <% end %>
-		</main>
+
+		</div>
 
 

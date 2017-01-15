@@ -30,7 +30,7 @@ header {
     height: 100%;
     display: block;
     margin-left: 35%;
-    margin-right: 26%;
+    margin-right: 20%;
 }
 
 .logo-img { 
@@ -137,15 +137,13 @@ input[name="popup"]:checked ~ span {
 }
 
 .text-login {
-
     text-align: center;
     margin-top: 4px;
     text-decoration: none;
     color: white;
-
 }
 
-.sign_out_button {
+.sign_out_button, .button_to {
     background-color: black;
     border-style: none;
     color: white;
@@ -156,7 +154,7 @@ input[name="popup"]:checked ~ span {
 	.logo {
 		width: 50%;
     	margin-left: 16%;
-    	margin-right: 16%;
+
     }
 
   	.search-icon {

@@ -1,0 +1,111 @@
+
+
+<div class="main-body">
+
+
+  <%= form_for @records, :html => { :class => "record-form", :multipart => true  } , url: {action: "update"} do |f| %>
+      <div>
+        <div>
+          <%= image_tag( @records.image.url ) %>
+
+          <%= f.file_field :image %>
+          Price: <br>
+          <%= f.number_field :price, class: :text_field, step: :any, min: 0 %>
+          Album: <br>
+          <%= f.text_field :album %>
+          Artist: <br>
+          <%= f.text_field :artist %>
+        </div>
+      </div>
+      <div>
+        <div>
+
+
+
+
+          <div class="genre_main">
+            <label class="genre" >
+
+              <%= check_box_tag "genre[]", 1, @genre[0], :id => "genre_classic" -%>
+              <span class="genre_select">
+	  							<span>Classic</span>
+	  						</span>
+            </label>
+
+            <label class="genre">
+              <%= check_box_tag "genre[]", 2, @genre[1], :id => "genre_electronic" -%>
+              <span class="genre_select" >
+	  							<span>Electronic</span>
+	  						</span>
+            </label>
+
+
+            <label class="genre">
+              <%= check_box_tag "genre[]", 3, @genre[2], :id => "genre_hiphop" -%>
+              <span class="genre_select" >
+                <span>Hip Hop</span>
+                </span>
+            </label>
+
+            <br>
+
+
+            <label class="genre">
+              <%= check_box_tag "genre[]", 4, @genre[3], :id => "genre_jazz" -%>
+              <span class="genre_select" >
+                  <span>Jazz</span>
+                </span>
+            </label>
+
+            <label class="genre">
+              <%= check_box_tag "genre[]", 5, @genre[4], :id => "genre_metal" -%>
+              <span class="genre_select" >
+                  <span>Metal</span>
+                </span>
+            </label>
+
+            <label class="genre">
+              <%= check_box_tag "genre[]", 6, @genre[5], :id => "genre_pop" -%>
+              <span class="genre_select" >
+                  <span>Pop</span>
+                </span>
+            </label><br>
+
+
+
+
+            <label class="genre">
+              <%= check_box_tag "genre[]", 7, @genre[6], :id => "genre_rnb" -%>
+              <span class="genre_select" >
+                  <span>RnB</span>
+                </span>
+            </label>
+
+            <label class="genre">
+              <%= check_box_tag "genre[]", 8, @genre[7], :id => "genre_rock" -%>
+              <span class="genre_select">
+                  <span>Rock</span>
+                </span>
+            </label>
+
+            <label class="genre">
+              <%= check_box_tag "genre[]", 9, @genre[8], :id => "genre_other" -%>
+              <span class="genre_select">
+                  <span>Other</span>
+                </span>
+            </label>
+          </div>
+
+
+          <label id="about">Description:</label>
+          <%= f.text_area :description, size: "40x17" %>
+          <%= f.submit "Add" %>
+          <div><% flash.each do |key, value| %>
+                <div class="alert"><%= value %></div>
+            <% end %></div>
+        </div>
+      </div>
+  <% end %>
+</div>
+
+
